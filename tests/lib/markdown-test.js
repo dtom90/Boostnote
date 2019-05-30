@@ -1,6 +1,8 @@
 import test from 'ava'
 import Markdown from 'browser/lib/markdown'
 import markdownFixtures from '../fixtures/markdowns'
+import {HtmlDiffer} from 'html-differ'
+import logger from 'html-differ/lib/logger'
 
 // basic markdown instance which meant to be used in every test cases.
 // To test markdown options, initialize a new instance in your test case
@@ -66,5 +68,14 @@ test('Markdown.render() should renders definition lists correctly', t => {
 
 test('Markdown.render() should render shortcuts correctly', t => {
   const rendered = md.render(markdownFixtures.shortcuts)
+  t.snapshot(rendered)
+})
+
+test('Markdown.render() should render paragraphs, headers, blockquotes correctly', t => {
+  const rendered = md.render(markdownFixtures.paragraphsHeadersBlockquotes)
+  const expected = markdownFixtures.expectedParagraphsHeadersBlockquotes
+  const htmlDiffer = new HtmlDiffer({ignoreAttributes: ['id', 'data-line'], ignoreDuplicateAttributes: true})
+  t.is(htmlDiffer.isEqual(rendered, expected), true,
+    logger.getDiffText(htmlDiffer.diffHtml(rendered, expected), {}))
   t.snapshot(rendered)
 })

@@ -1,7 +1,7 @@
 {
   "name": "boost",
   "productName": "Boostnote",
-   "version": "0.11.17",
+  "version": "0.11.17",
   "main": "index.js",
   "description": "Boostnote",
   "license": "GPL-3.0",
@@ -149,6 +149,7 @@
     "grunt": "^0.4.5",
     "grunt-electron-installer": "2.1.0",
     "history": "^1.17.0",
+    "html-differ": "^1.4.0",
     "husky": "^1.1.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.3",
