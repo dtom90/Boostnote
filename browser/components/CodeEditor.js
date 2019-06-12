@@ -213,7 +213,12 @@ export default class CodeEditor extends React.Component {
       'Cmd-/': function (cm) {
         if (global.process.platform !== 'darwin') { return }
         const dateNow = new Date()
-        cm.replaceSelection(dateNow.toLocaleDateString())
+        const dt = new Date()
+        const mm = `${dt.getMonth() + 1}`.padStart(2, 0)
+        const dd = `${dt.getDate()}`.padStart(2, 0)
+        const yyyy = dt.getFullYear()
+        const format = yyyy + '-' + mm + '-' + dd
+        cm.replaceSelection(format)
       },
       'Shift-Ctrl-/': function (cm) {
         if (global.process.platform === 'darwin') { return }

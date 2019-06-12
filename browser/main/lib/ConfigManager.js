@@ -31,6 +31,9 @@ export const DEFAULT_CONFIG = {
     toggleMode: OSX ? 'Command + Alt + M' : 'Ctrl + M',
     deleteNote: OSX ? 'Command + Shift + Backspace' : 'Ctrl + Shift + Backspace',
     pasteSmartly: OSX ? 'Command + Shift + V' : 'Ctrl + Shift + V',
+    insertDate: OSX ? 'Command + /' : 'Ctrl + /',
+    insertDateTime: OSX ? 'Command + Alt + /' : 'Ctrl + Shift + /',
+    dateFormat: 'yyyy-mm-dd',
     toggleMenuBar: 'Alt'
   },
   ui: {
