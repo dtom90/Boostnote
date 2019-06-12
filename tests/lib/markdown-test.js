@@ -74,7 +74,7 @@ test('Markdown.render() should render shortcuts correctly', t => {
 test('Markdown.render() should render paragraphs, headers, blockquotes correctly', t => {
   const rendered = md.render(markdownFixtures.paragraphsHeadersBlockquotes)
   const expected = markdownFixtures.expectedParagraphsHeadersBlockquotes
-  const htmlDiffer = new HtmlDiffer({ignoreAttributes: ['id', 'data-line'], ignoreDuplicateAttributes: true})
+  const htmlDiffer = new HtmlDiffer({ignoreAttributes: ['id', 'data-line'], ignoreEmptyAttributes: true})
   t.is(htmlDiffer.isEqual(rendered, expected), true,
     logger.getDiffText(htmlDiffer.diffHtml(rendered, expected), {}))
   t.snapshot(rendered)

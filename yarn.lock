@@ -4424,10 +4424,9 @@ html-comment-regex@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e"
 
-html-differ@^1.4.0:
+"html-differ@github:dtom90/html-differ":
   version "1.4.0"
-  resolved "https://registry.yarnpkg.com/html-differ/-/html-differ-1.4.0.tgz#bb95a74d54d8f107b75ad5ada166a6924093b828"
-  integrity sha512-7kW2niHCIVOsRaligGdwV4B44YsVxKrOaRNec+u7Ab2r1sBziXcaWxWJ5lj0apIGaTZprprQAg2t2SUkGoPaUw==
+  resolved "https://codeload.github.com/dtom90/html-differ/tar.gz/9b4491ea2e31e3c86c17c433fc07806eb125d43c"
   dependencies:
     chalk "1.0.0"
     coa "0.4.0"
